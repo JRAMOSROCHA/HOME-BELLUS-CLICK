@@ -53,20 +53,23 @@ body {
     opacity: 1.0;
 }
 
-/* EFEITOS DOS ELEMENTOS*/
-
 .rodape {
     font-family: var(--fonte-rodape);
     font-size: var(--tamanho-10px);
     color: var(--rodape);
 }
 
-img {
-    opacity: 1;
+/* EFEITOS DOS ELEMENTOS*/
+
+img,
+.cabecalho__direita__botao,
+.container_junte__se__a__nos__botao {
     transition: 0.5s;
 }
 
-img:hover {
+img:hover,
+.cabecalho__direita__botao:hover,
+.container_junte__se__a__nos__botao:hover {
     opacity: 0.7;
 }
 
