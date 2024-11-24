@@ -49,6 +49,7 @@
     /* tamanhos dos dots carrossel*/
     --carrossel-dots-8px: 8px;
     --carrossel-dots-12px: 12px;
+    --carrossel-dots-16px: 16px;
 }
 
 body {
@@ -337,8 +338,8 @@ img:hover,
 
 .swiper,
 .swiper-slide {
-    width: 360px;
-    height: 150px;
+    width: 50%;
+    height: auto;
     background-color: var(--fundo_verde);
 }
 
@@ -354,7 +355,7 @@ img:hover,
     border: solid 2px var(--botao_borda);
     border-radius: 10px;
     outline: none;
-    text-align: justify;
+    text-align: center;
     font-weight: normal;
     padding: 10px;
 }
@@ -478,7 +479,6 @@ img:hover,
         font-size: var(--tamanho-14px);
     }
 
-    
     .swiper-pagination,
     .swiper-pagination-bullet {
         width: var(--carrossel-dots-12px);
@@ -493,5 +493,70 @@ img:hover,
     .rodape_siga__nos__logo {
         width: 20px;
         height: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .cabecalho__conteudo__logo{
+        width: 200px;
+        height: 100px;
+    }
+
+    .cabecalho__direita,
+    .container_junte__se__a__nos__botao,
+    .rodape__titulo,
+    .container__copyright__texto {
+        font-size: var(--tamanho-20px);
+    }
+
+    .container__conteudo_apresentacao__titulo,
+    .container__apresentacao__caracteristicas,
+    .container__servicos__profissionais__conteudo__texto,
+    .container__servicos__profissionais__titulo,
+    .carrossel__titulo {
+        font-size: var(--tamanho-24px);
+    }
+
+    .container__conteudo_apresentacao__paragrafo__item,
+    .container__apresentacao__caracteristicas__descricao,
+    .container__servicos__profissionais__conteudo__descricao,
+    .container_junte__se__a__nos__paragrafo,
+    .rodape__descricao {
+        font-size: var(--tamanho-18px);
+    }
+
+    .container__apresentacao__imagem__item {
+        width: 156px;
+        height: 134.57px;
+    }
+
+    .container__apresentacao2__imagem__item {
+        width: 650px;
+    }
+ 
+    .container__servicos__profissionais__conteudo__imagem__item {
+        position: relative;
+        width: 470px;
+        height: 152.75px;
+    }
+
+    .carrossel__texto {
+        font-size: var(--tamanho-22px);
+    }
+
+    .swiper-pagination,
+    .swiper-pagination-bullet {
+        width: var(--carrossel-dots-16px);
+        height: var(--carrossel-dots-16px);
+    }
+
+    .rodape__logo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .rodape_siga__nos__logo {
+        width: 28px;
+        height: 28px;
     }
 }
