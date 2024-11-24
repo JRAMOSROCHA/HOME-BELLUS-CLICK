@@ -261,9 +261,9 @@ img:hover,
 }
 
 .container__onda__cima__item,
+.container__onda__cima__item2,
 .container__onda__baixo__item {
-    width: 360px;
-    height: 95px;
+    width: 100%;
 }
 
 .container__servicos__profissionais {
@@ -297,7 +297,6 @@ img:hover,
 .container__onda__cima__item2,
 .container_junte__se__a__nos {
     background-color: var(--onda);
-    gap: 5px;
 }
 
 .container_junte__se__a__nos {
@@ -329,6 +328,7 @@ img:hover,
 
 .carrossel {
     background-color: var(--fundo_verde);
+    width: 100%;
 }
 
 .swiper,
@@ -357,7 +357,7 @@ img:hover,
 
 .swiper-pagination {
     position: auto;
-    margin: auto;
+    width: 100%;
 }
 
 .swiper-pagination-bullet-active{
