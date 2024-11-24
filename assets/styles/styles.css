@@ -45,11 +45,20 @@
     --tamanho-20px: 20px;
     --tamanho-22px: 22px;
     --tamanho-24px: 24px;
+    --tamanho-26px: 26px;
+    --tamanho-28px: 28px;
+    --tamanho-30px: 30px;
+    --tamanho-32px: 32px;
+    --tamanho-34px: 34px;
+    --tamanho-36px: 36px;
+    --tamanho-38px: 38px;
+    --tamanho-40px: 40px;
 
     /* tamanhos dos dots carrossel*/
     --carrossel-dots-8px: 8px;
     --carrossel-dots-12px: 12px;
     --carrossel-dots-16px: 16px;
+    --carrossel-dots-20px: 20px;
 }
 
 body {
@@ -142,7 +151,7 @@ img:hover,
 }
 
 .cabecalho {
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: 3px;
 }
 
@@ -181,7 +190,7 @@ img:hover,
     outline: none;
     text-align: center;
     font-weight: bold;
-    padding: 6px;
+    padding: 3px;
 }
 
 .principal {
@@ -444,6 +453,11 @@ img:hover,
         font-size: var(--tamanho-12px);
     }
 
+    .cabecalho__direita__botao {
+        padding: 6px;
+        border-radius: 20px;
+    }
+
     .container__conteudo_apresentacao__titulo,
     .container__apresentacao__caracteristicas,
     .container__servicos__profissionais__conteudo__texto,
@@ -509,6 +523,11 @@ img:hover,
         font-size: var(--tamanho-20px);
     }
 
+    .cabecalho__direita__botao {
+        padding: 9px;
+        border-radius: 28.44px;
+    }
+
     .container__conteudo_apresentacao__titulo,
     .container__apresentacao__caracteristicas,
     .container__servicos__profissionais__conteudo__texto,
@@ -558,5 +577,75 @@ img:hover,
     .rodape_siga__nos__logo {
         width: 28px;
         height: 28px;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .cabecalho__conteudo__logo{
+        width: 300px;
+        height: 150px;
+    }
+
+    .cabecalho__direita,
+    .container_junte__se__a__nos__botao,
+    .rodape__titulo,
+    .container__copyright__texto {
+        font-size: var(--tamanho-30px);
+    }
+
+    .cabecalho__direita__botao {
+        padding: 12px;
+        border-radius: 48px;
+    }
+    
+    .container__conteudo_apresentacao__titulo,
+    .container__apresentacao__caracteristicas,
+    .container__servicos__profissionais__conteudo__texto,
+    .container__servicos__profissionais__titulo,
+    .carrossel__titulo {
+        font-size: var(--tamanho-34px);
+    }
+
+    .container__conteudo_apresentacao__paragrafo__item,
+    .container__apresentacao__caracteristicas__descricao,
+    .container__servicos__profissionais__conteudo__descricao,
+    .container_junte__se__a__nos__paragrafo,
+    .rodape__descricao {
+        font-size: var(--tamanho-28px);
+    }
+
+    .container__apresentacao__imagem__item {
+        width: 490px;
+        height: 365px;
+    }
+
+    .container__apresentacao2__imagem__item {
+        width: 820px;
+    }
+ 
+    .container__servicos__profissionais__conteudo__imagem__item {
+        position: relative;
+        width: 670px;
+        height: 217.75px;
+    }
+
+    .carrossel__texto {
+        font-size: var(--tamanho-32px);
+    }
+
+    .swiper-pagination,
+    .swiper-pagination-bullet {
+        width: var(--carrossel-dots-20px);
+        height: var(--carrossel-dots-20px);
+    }
+
+    .rodape__logo {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .rodape_siga__nos__logo {
+        width: 38px;
+        height: 38px;
     }
 }
