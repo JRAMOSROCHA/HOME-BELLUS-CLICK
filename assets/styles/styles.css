@@ -45,6 +45,10 @@
     --tamanho-20px: 20px;
     --tamanho-22px: 22px;
     --tamanho-24px: 24px;
+
+    /* tamanhos dos dots carrossel*/
+    --carrossel-dots-8px: 8px;
+    --carrossel-dots-12px: 12px;
 }
 
 body {
@@ -86,7 +90,7 @@ img:hover,
 .container__apresentacao2,
 .container__apresentacao2__imagem,
 .container__apresentacao__caracteristicas,
-.container__onda__cima,
+.container__onda__cima2,
 .container__servicos__profissionais,
 .container__servicos__profissionais__conteudo,
 .container__servicos__profissionais__conteudo__texto,
@@ -190,8 +194,9 @@ img:hover,
 
 .container__apresentacao {
     flex-direction: row;
-    justify-content: space-around;
-    padding: 3px;
+    justify-content: space-between;
+    padding: 0 3px;
+    gap: auto;
 }
 
 .container__conteudo_apresentacao {
@@ -199,8 +204,8 @@ img:hover,
     flex-direction: column;
     line-height: normal;
     letter-spacing: normal;
-    row-gap: 15px;
-    padding: 3px;
+    gap: 15px;
+    padding: 0 3px;
 }
 
 .container__conteudo_apresentacao__titulo{
@@ -239,7 +244,7 @@ img:hover,
 
 .container__apresentacao2 {
     flex-direction: column;
-    padding: 0 0 0 3px;
+    padding: 0 3px;
     gap: 15px;
 }
 
@@ -250,32 +255,29 @@ img:hover,
 
 .container__apresentacao2__imagem__item {
     width: 360px;
-    height: 130px;
-}
-
-.container__onda__cima,
-.container__onda__baixo {
-    position: relative;
-    background-color: var(--branco);
-    width: 100%;
+    height: auto;
 }
 
 .container__onda__cima__item,
 .container__onda__cima__item2,
-.container__onda__baixo__item {
+.container__onda__baixo__item,
+.container__onda__baixo__item2 {
     width: 100%;
+    height: 100%;
 }
 
 .container__servicos__profissionais {
     background-color: var(--fundo_verde);
     flex-direction: column;
-    justify-content: space-around;
-    padding: 3px;
-    gap: 15px;
+    justify-content: space-between;
+    gap: 0 15px;
+    width: 100%;
 }
 
 .container__servicos__profissionais__conteudo {
-    gap: 20px;
+    width: 100%;
+    gap: 0 20px;
+    padding: 3px;
 }
 
 .container__servicos__profissionais__conteudo__texto {
@@ -283,20 +285,22 @@ img:hover,
 }
 
 .container__servicos__profissionais__conteudo__imagem {
-    position: relative;
     width: auto;
     height: auto;
 }
 
 .container__servicos__profissionais__conteudo__imagem__item {
-    width: auto;
-    height: auto;
+    position: relative;
+    width: 94px;
+    height: 61px;
 }
 
-.container__onda__baixo,
 .container__onda__cima__item2,
+.container__onda__baixo__item2,
 .container_junte__se__a__nos {
     background-color: var(--onda);
+    position: relative;
+    width: 100%;
 }
 
 .container_junte__se__a__nos {
@@ -355,9 +359,14 @@ img:hover,
     padding: 10px;
 }
 
+.swiper-pagination,
+.swiper-pagination-bullet {
+    width: var(--carrossel-dots-8px);
+    height: var(--carrossel-dots-8px);
+}
+
 .swiper-pagination {
     position: auto;
-    width: 100%;
 }
 
 .swiper-pagination-bullet-active{
@@ -397,14 +406,14 @@ img:hover,
     font-weight: normal;
 }
 
-.rodape__siga-nos {
+.rodape__siga__nos {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     gap: auto;
 }
 
-.rodape_siga-nos__logo {
+.rodape_siga__nos__logo {
     position: relative;
     width: 10px;
     height: 10px;
@@ -421,10 +430,68 @@ img:hover,
     font-weight: 400;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 720px) {
+    .cabecalho__conteudo__logo{
+        width: 100px;
+        height: 50px;
+    }
 
-}
+    .cabecalho__direita,
+    .container_junte__se__a__nos__botao,
+    .rodape__titulo,
+    .container__copyright__texto {
+        font-size: var(--tamanho-12px);
+    }
 
-@media screen and (min-width: 1728px) {
+    .container__conteudo_apresentacao__titulo,
+    .container__apresentacao__caracteristicas,
+    .container__servicos__profissionais__conteudo__texto,
+    .container__servicos__profissionais__titulo,
+    .carrossel__titulo {
+        font-size: var(--tamanho-16px);
+    }
 
+    .container__conteudo_apresentacao__paragrafo__item,
+    .container__apresentacao__caracteristicas__descricao,
+    .container__servicos__profissionais__conteudo__descricao,
+    .container_junte__se__a__nos__paragrafo,
+    .rodape__descricao {
+        font-size: var(--tamanho-10px);
+    }
+
+    .container__apresentacao__imagem__item {
+        width: 106px;
+        height: 91.71px;
+    }
+
+    .container__apresentacao2__imagem__item {
+        width: 480px;
+    }
+ 
+    .container__servicos__profissionais__conteudo__imagem__item {
+        position: relative;
+        width: 370px;
+        height: 120.25px;
+    }
+
+    .carrossel__texto {
+        font-size: var(--tamanho-14px);
+    }
+
+    
+    .swiper-pagination,
+    .swiper-pagination-bullet {
+        width: var(--carrossel-dots-12px);
+        height: var(--carrossel-dots-12px);
+    }
+
+    .rodape__logo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .rodape_siga__nos__logo {
+        width: 20px;
+        height: 20px;
+    }
 }
